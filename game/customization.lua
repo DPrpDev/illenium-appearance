@@ -407,6 +407,7 @@ local function setCamera(key)
                 repeat Wait(500)
                 until not IsCamInterpolating(cameraHandle) and IsCamActive(tmpCamera)
                 DestroyCam(cameraHandle, false)
+                exports[dragcamResource]:stopDragCam()
                 cameraHandle = tmpCamera
                 isCameraInterpolating = false
             end)
